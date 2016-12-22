@@ -20,3 +20,8 @@ github_username:
 
 # Build settings
 markdown: kramdown
+
+exclude:
+  - jbh.sh
+  - serve.sh
+  - serve-drafts.sh
