@@ -12,7 +12,7 @@ _postPath="/_posts/"
 _draftPath="/_drafts/"
 _assetPath="/assets/"
 
-_excerptSeparator="/--more--/"
+_excerptSeparator="<!--more-->"
 
 # Remote Server Settings
 _publishUseRsync="true"
@@ -40,7 +40,7 @@ function fnGetFileNameFromDateAndTitle {
 function fnGetAssetDirectoryFromDateAndTitle {
 	if [[ "$_assetPath" != "" ]]; then
 		local _title=$(fnConvertTitleToFilenameFormat "$2")
-		echo "$_assetPath$(date -d $1 +%Y)/$(date -d $1 +%m)/$(date -d $1 +%d)/$_title"
+		echo "$_assetPath$(date -d $1 +%Y)-$_title"
 	else
 		echo ""
 	fi
@@ -208,14 +208,16 @@ function fnNew {
 	echo "date: $_date" >> ".$_outputFile"
 	echo "categories: []" >> ".$_outputFile"
 	echo "tags: []" >> ".$_outputFile"
-	echo "---" >> ".$_outputFile"
-	
 	# Create asset directory for post and add markdown link reference to bottom
-	if [[ "_assetDir" != "" ]]; then
-		echo -e "\n\n$_excerptSeparator\n\n[assets]: $_assetDir" >> ".$_outputFile"
+	if [[ "$_assetDir" != "" ]]; then
+		echo "assets: $_assetDir" >> ".$_outputFile"
 		echo "  Creating asset folder '$_assetDir'"
 		mkdir -p ".$_assetDir"
 	fi
+	echo "excerpt_separator: <!--more-->" >> ".$_outputFile"
+	echo "---" >> ".$_outputFile"
+
+	echo -e "\n\n$_excerptSeparator\n\n" >> ".$_outputFile"
 }
 # Publish
 function fnPublish {
