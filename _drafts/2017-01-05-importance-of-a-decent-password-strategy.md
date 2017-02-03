@@ -2,8 +2,8 @@
 layout: post
 title: "Importance of a decent password strategy"
 date: 2017-01-05
-categories: []
-tags: []
+categories: [security]
+tags: [passwords]
 assets: /assets/2017-importance-of-a-decent-password-strategy
 excerpt_separator: <!--more-->
 ---
@@ -47,9 +47,9 @@ A password manager stores all your passwords in a safe manner. Password
 managers come in two forms, an app that you install on your laptop or phone,
 or in the form of a website offering this service. Using a password manager
 requires you to remember one strong password, the password manager will
-remember all your other passwords!
-
-TODO: not think of new passwords -> generates new passwords.
+remember all your other passwords! And perhaps even better, you never have to
+think of new passwords again. A password manager can generate strong passwords
+for you.
 
 [Lastpass][3] is a well known password manager website. Yes, when using a service
 like Lastpass you put a lot of trust in that service. However it is their core
@@ -62,10 +62,30 @@ using a strong password is essential. If someone gets their hands on your
 Keepass file, he or she can not do anything with it, unless they know your
 password.
 
-# Strong password
-I have talked about strong passwords and mentioned pass phrases.
+# Strong master password
+When we make use of a password manager we only have to remember one password.
+Since this password will protect all other passwords it needs to be very strong.
+What makes a password strong? It should be long and unique dictionary. Note
+that I do not mention 'should contain special characters', password length is
+way more important than whether or not it contains special characters. A well
+known method to generate strong passwords that are easy to remember is the
+[Diceware][5] method. With this method you can generate a pass phrase consisting
+of multiple words wich is fairly easy to remember. Instead of using dice you
+could use this [generator][6]. Make sure to read the 'Is it safe?' entry in the
+[FAQ][6].
+
+# My password strategy
+I use Keepass as password manager and store the password database in my Dropbox
+so I can easily access it on my phone, my laptop and my system at work. This is
+safe since the password file is encrypted. My master password is created using
+the Diceware method and consists of seven words. Whenever I need a new password,
+Keepass generates and stores it. Besides my master password I know the password
+to my email account, in case I ever need to reset my Dropbox account to gain
+access to my Keepass database.
 
 [1]: https://www.troyhunt.com/observations-and-thoughts-on-the-linkedin-data-breach/
 [2]: https://www.troyhunt.com/adobe-credentials-and-serious/
 [3]: https://www.lastpass.com/how-it-works
 [4]: http://keepass.info/
+[5]: http://world.std.com/~reinhold/diceware.html
+[6]: https://www.rempe.us/diceware/#eff
