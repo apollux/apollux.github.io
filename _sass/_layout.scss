@@ -153,3 +153,26 @@
         font-size: 1em;
     }
 }
+
+/**
+ * footer
+ */
+.site-footer {
+    text-align: center;
+    color: $grey-color;
+    font-size: $small-font-size;
+
+    a {
+        color: $grey-color;
+        text-decoration: underline;
+
+        &:visited {
+            color: $grey-color;
+        }
+
+        &:hover {
+            color: $grey-color;
+            text-decoration: underline;
+        }
+    }
+}
