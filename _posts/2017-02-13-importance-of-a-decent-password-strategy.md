@@ -17,16 +17,16 @@ the risks your passwords are exposed to, and describe my password strategy.
 
 <!--more-->
 
-# Risks
+## Risks
 We have passwords everywhere, your e-mail account, social media, web shops, you
 name it. So what risks are these passwords exposed to?
 
-## Weak passwords
+### Weak passwords
 The passwords could be weak. Anything found in a dictionary is a weak password,
 anything under twelve characters is weak. Passwords can be guessed by attackers,
 often in a automated process.
 
-## Password reuse
+### Password reuse
 Since we have entered passwords everywhere, we rely on the security of each and
 website to keep our password safe. Unfortunately websites get hacked regulary.
 Big names like [LinkedIn][1] and [Adobe][2] are among those hacked websites.
@@ -42,7 +42,7 @@ need to have a unique password everywhere. I know, that might sound like a
 nightmare, remembering dozens of unique passwords. Don't worry you end up
 needing to remember only one password!
 
-# Password managers
+## Password managers
 A password manager stores all your passwords in a safe manner. Password
 managers come in two forms, an app that you install on your laptop or phone,
 or in the form of a website offering this service. Using a password manager
@@ -62,7 +62,7 @@ using a strong password is essential. If someone gets their hands on your
 Keepass file, he or she can not do anything with it, unless they know your
 password.
 
-# Strong master password
+## Strong master password
 When we make use of a password manager we only have to remember one password.
 Since this password will protect all other passwords it needs to be very strong.
 What makes a password strong? It should be long and unique dictionary. Note
@@ -74,7 +74,7 @@ of multiple words which is fairly easy to remember. Instead of using dice you
 could use this [generator][6]. Make sure to read the 'Is it safe?' entry in the
 [FAQ][6].
 
-# My password strategy
+## My password strategy
 I use Keepass as password manager and store the password database in my Dropbox
 so I can easily access it on my phone, my laptop and my system at work. This is
 safe since the password file is encrypted. My master password is created using
@@ -83,7 +83,7 @@ Keepass generates and stores it. Besides my master password I know the password
 to my email account, in case I ever need to reset my Dropbox account to gain
 access to my Keepass database.
 
-# Think about your password strategy
+## Think about your password strategy
 If there is only one thing you take away from this post I hope it is that you
 think about your password strategy. Do you already use a password manager? Is
 your master password strong enough? If so, great! If not, make some changes!

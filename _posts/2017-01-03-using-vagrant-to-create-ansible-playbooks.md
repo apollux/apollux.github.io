@@ -15,13 +15,13 @@ This post describes my setup for developing Ansible playbooks.
 
 <!--more-->
 
-# What is Ansible?
+## What is Ansible?
 Ansible is a tool to help you manage and provision your Linux installations. It
 automate installations, script migrations, etc. Basically it allow allows you
 to script everything that needs to installed or configured on your servers.
 More info can be found [here][1] and [here][2].
 
-# What is Vagrant?
+## What is Vagrant?
 Vagrant describes itself as follows:
 
 > \[...\] the command line utility for managing the lifecycle of virtual machines.
@@ -31,7 +31,7 @@ Vagrant describes itself as follows:
 Vagrant allows one to quickly create virtual machines (VM) in a reproducible
 manner. See here on how to [get started][4] with Vagrant.
 
-# Combining Ansible and Vagrant
+## Combining Ansible and Vagrant
 Combining the ability to quickly create VMs that allow access over ssh,
 along with utilizing Ansible to provision those VMs makes for an ideal
 development environment for Ansible playbooks. One can create a VM, run a
@@ -41,7 +41,7 @@ on the VM, re-create the VM and start from scratch.
 Vagrant supports Ansible out of the box as a [provisioner][5] which is really
 convenient.
 
-# Prerequisites
+## Prerequisites
 This post assumes a Linux host system. The following needs to be installed:
 
 * Vagrant (1.8.5)
@@ -50,11 +50,11 @@ This post assumes a Linux host system. The following needs to be installed:
 
 The version numbers above are the ones I used when writing this post.
 
-# Getting started
+## Getting started
 First thing we need is a Vagrantfile, this instructs Vagrant on how to setup
 and configure a VM.
 
-## Create a Vagrantfile
+### Create a Vagrantfile
 Create a file called `Vagrantfile` in an empty directory with the following
 content:
 
@@ -87,7 +87,7 @@ end
 This instructs Vagrant to run the Ansible provisioner with our playbook.yml
 file as playbook.
 
-## Create a playbook
+### Create a playbook
 Next, lets create a simple Ansible playbook. The playbook below is the simplest
 form of a Ansible playbook. When your playbook grows a single file is quickly not
 maintainable. The Ansible recommended way of [organizing your playbooks][6] can
@@ -108,7 +108,7 @@ Now lets create our playbook. Create a file called `playbook.yml` next to the
 Vagrantfile and copy the content above into it. This playbook will effectively
 run `apt-get update` and then install Nginx.
 
-# Lets build and provision the VM
+## Lets build and provision the VM
 Now that we are all setup we can have Vagrant create the VM and run the
 playbook. Open a terminal in the directory containing the Vagrantfile. Run
 `vagrant up`. This will make Vagrant create the VM and run the playbook. It
@@ -150,7 +150,7 @@ the VM.
 Alternatively Ansible can be invoked directly. Vagrant generates a inventory
 file which can be used like so: `ansible-playbook -i .vagrant/provisioners/ansible/inventory/vagrant_ansible_inventory -become playbook.yml`.
 
-# Skeleton project
+## Skeleton project
 I have created a skeleton project containing a Vagrantfile and Ansible
 playbook (using roles) on my [Github][7].
 
