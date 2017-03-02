@@ -1,0 +1,16 @@
+<div class="recent-posts">
+  But wait! There is more.
+  <ul class="post-list">
+  {% for post in site.posts limit:6 %}
+    {% if post.url != page.url %}
+      {% if forloop.index < 6 or found %}
+      <li>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </li>
+      {% endif %}
+    {% else %}
+      {% assign found = true %}
+    {% endif %}
+  {% endfor %}
+  </ul>
+</div>

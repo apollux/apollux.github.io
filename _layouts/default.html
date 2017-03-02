@@ -13,8 +13,13 @@
       </div>
     </div>
 
-    {% include footer.html %}
+    {% if page.layout == "post" %}
+    <div class="wrapper">
+      {% include recent-posts.html %}
+    </div>
+    {% endif %}
 
+    {% include footer.html %}
   </body>
 
 </html>
