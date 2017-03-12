@@ -28,8 +28,9 @@ often in a automated process.
 
 ### Password reuse
 Since we have entered passwords everywhere, we rely on the security of each and
-website to keep our password safe. Unfortunately websites get hacked regulary.
-Big names like [LinkedIn][1] and [Adobe][2] are among those hacked websites.
+every website to keep our password safe. Unfortunately websites get hacked
+regulary. Big names like [LinkedIn][1] and [Adobe][2] are among those hacked
+websites.
 
 When a website is hacked and the attackers got their hands on the user data,
 they could gain access to your email and password. The first thing attackers
