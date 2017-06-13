@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Lessons from a dev"
-date: 2017-02-19
+date: 2017-06-13
 categories: [dev]
 tags: []
 assets: /assets/2017-lessons-from-a-dev
