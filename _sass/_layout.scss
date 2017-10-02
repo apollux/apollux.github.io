@@ -4,7 +4,8 @@
 .site-header {
     border-top: 5px solid $grey-color-dark;
     line-height: 3.5em;
-    min-height: 5em;
+    min-height: 8em;
+    background-image: url("header.png");
 
     // Positioning context for the mobile navigation icon
     position: relative;
