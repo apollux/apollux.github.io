@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Lessons learned from 6 months of using Docker"
+title: "Thoughts after 6 months of using Docker"
 date: 2017-09-27
-categories: []
-tags: []
+categories: [dev]
+tags: [docker]
 assets: /assets/2017-lessons-learned-from-6-months-of-using-docker
 excerpt_separator: <!--more-->
 ---
@@ -75,6 +75,27 @@ Updates to Docker on Windows are released quite frequently, so the situation
 described above can change quickly, but for now I would stronly advise against
 using Docker on Windows.
 
+# Docker is an awesome technology stack!
+Docker is truly awesome technology, it is really versatile in ways it can be
+applied. It is not limited to deploying 'enterprisy' applications based on micro
+services. Docker is great to create development setups that you can share with
+your, if it builds on one machine it builds everywhere.
+
+Instead of documenting a development setup you can create a
+[docker-compose.yml][3] that setups a database, webserver and whatever you need
+to run and compile your application. Automate all the things!
+
+A fun use of Docker is to use it to 'install' applications for regular desktop
+use. One example is [Cyberchef][4] "a web app for encryption, encoding,
+compressioni and data analysis", which you can get up and running locally with:
+`docker run --rm -it -p 8000:8000 mpepping/cyberchef`
+
+# Looking for more info on Docker?
+This is a great place to get started. [Awesome Docker][5] is a fantastic
+collection of resources.
+
 [1]: https://docs.docker.com/engine/swarm/configs/
 [2]: https://stackoverflow.com/questions/42203488/settings-to-windows-firewall-to-allow-docker-for-windows-to-share-drive
-
+[3]: https://docs.docker.com/compose/overview/
+[4]: https://gchq.github.io/CyberChef/
+[5]: https://veggiemonk.github.io/awesome-docker/
